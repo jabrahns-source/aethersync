@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  build:
+    build: .
+    volumes:
+      - .:/app
+    command: python3 build_orchestrator.py
+
+  dev:
+    build: .
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+
+  benchmark:
+    build: .
+    volumes:
+      - .:/app
+    command: python3 run_engine.py
