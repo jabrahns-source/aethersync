@@ -1,0 +1,4 @@
+# Optional accelerators. Core + tests need only CPython stdlib.
+# jax>=0.4
+# cirq>=1.3
+# numpy>=1.26
